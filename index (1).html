@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 3 - Layout IFRAME</title>
+    <style>
+        * { box-sizing: border-box; }
+        html, body { margin: 0; height: 100%; }
+        iframe { border: none; display: block; }
+
+        .container { display: flex; flex-direction: column; height: 100vh; }
+        .header  { height: 100px; width: 100%; }
+        .tengah  { flex: 1; display: flex; min-height: 0; }
+        .sidebar { width: 180px; height: 100%; border-right: 2px solid gray; }
+        .main    { flex: 1; height: 100%; }
+        .footer  { height: 50px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <iframe class="header" src="header.html"></iframe>
+
+        <div class="tengah">
+            <iframe class="sidebar" src="sidebar.html"></iframe>
+            <iframe class="main" name="main" src="main.html"></iframe>
+        </div>
+
+        <iframe class="footer" src="footer.html"></iframe>
+    </div>
+</body>
+</html>

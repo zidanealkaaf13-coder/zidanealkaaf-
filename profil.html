@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile - Nama Lengkap</title>
+
+    <style>
+        /* =========================
+           1. PENGATURAN DASAR
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #eaf2fa;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .profile-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #c7d8eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        h1, h2, h3 {
+            color: #203d60;
+            margin-top: 0;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #3979c3;
+        }
+
+        /* =========================
+           2. HEADER PROFIL
+        ========================= */
+
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            padding: 30px;
+            border-bottom: 1px solid #c7d8eb;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #b7cce5;
+            border-radius: 5px;
+            background-color: #eaf2fa;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+        }
+
+        .categories {
+            width: 130px;
+            padding-left: 20px;
+            border-left: 1px solid #d5e2f0;
+        }
+
+        .categories ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+
+        /* =========================
+           3. DESKRIPSI DIRI
+        ========================= */
+
+        .about {
+            padding: 25px 30px;
+            border-bottom: 1px solid #c7d8eb;
+        }
+
+        .about p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* =========================
+           4. MULTIMEDIA
+        ========================= */
+
+        .multimedia {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 25px 30px;
+            border-bottom: 1px solid #c7d8eb;
+        }
+
+        .media-box {
+            min-width: 0;
+        }
+
+        .video-player {
+            width: 100%;
+            display: block;
+            border-radius: 5px;
+            background-color: #eaf2fa;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .gallery-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 1px solid #c7d8eb;
+            border-radius: 4px;
+            background-color: #eaf2fa;
+        }
+
+        /* =========================
+           5. LAMPIRAN FILE
+        ========================= */
+
+        .attachments {
+            padding: 25px 30px;
+        }
+
+        .attachments ul {
+            padding-left: 20px;
+        }
+
+        .attachments li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           6. RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 700px) {
+            body {
+                padding: 12px;
+            }
+
+            .profile-header {
+                flex-wrap: wrap;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .categories {
+                width: 100%;
+                padding: 12px 0 0;
+                border-left: none;
+                border-top: 1px solid #d5e2f0;
+            }
+
+            .categories ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 25px;
+            }
+
+            .about,
+            .attachments {
+                padding: 20px;
+            }
+
+            .multimedia {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="profile-page">
+
+        <!-- HEADER PROFIL -->
+        <header class="profile-header">
+
+            <img
+                class="profile-photo"
+                src="foto/jnck.png"
+                alt="Foto profil saya"
+            >
+
+            <div class="profile-info">
+                <h1>Mohammad Zidane Alkaaf</h1>
+
+                <p>Alamatnya rahasia...</p>
+                <p>Depok, 16411</p>
+
+                <p>
+                    Email:
+                    <a href="zidanealkaaf@gmail.com">
+                        zidanealkaaf@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Telepon:
+                    <a href="tel:087846244867">
+                        0878 4624 4867
+                    </a>
+                </p>
+            </div>
+
+            <aside class="categories">
+                <h3>Categories</h3>
+
+                <ul>
+                    <li>Teknologi</li>
+                    <li>Pendidikan</li>
+                    <li>Hobi</li>
+                </ul>
+            </aside>
+
+        </header>
+
+
+        <!-- DESKRIPSI DIRI -->
+        <section class="about">
+
+            <h2>Tentang Saya</h2>
+
+            <p>
+                Halo, nama saya Mohammad Zidane Alkaaf merupakan mahasiswa
+                Teknik Informatika. yang tertarik mempelajari teknologi,
+                pemrograman, dan perkembangan dunia komputer. Saya senang
+                mempelajari hal baru serta memahami bagaimana teknologi
+                dapat digunakan untuk menyelesaikan berbagai permasalahan.
+            </p>
+
+            <p>
+                Saya ingin terus mengembangkan kemampuan dalam bidang
+                teknologi.Sebagai mahasiswa S1 Teknik Informatika di Sekolah Tinggi Teknologi Terpadu Nurul Fikri, saya sedang membangun fondasi yang kuat dalam pengembangan perangkat lunak dan pemecahan masalah berbasis teknologi.
+            </p>
+        </section>
+
+
+        <!-- KONTEN MULTIMEDIA -->
+        <section class="multimedia">
+
+            <!-- VIDEO PROFIL -->
+            <div class="media-box">
+
+                <h3>Video Profil</h3>
+
+                <video class="video-player" controls>
+                    <source src="assets/video saya.mp4" type="video/mp4">
+
+                    Browser Anda tidak mendukung pemutar video.
+                </video>
+
+                <p>Video perkenalan diri</p>
+
+            </div>
+
+
+            <!-- KOLEKSI FOTO -->
+            <div class="media-box">
+
+                <h3>Koleksi Foto</h3>
+
+                <div class="photo-gallery">
+
+                    <img
+                        class="gallery-photo"
+                        src="foto/ganteng.jpg"
+                    alt="Foto koleksi pertama"
+                    >
+
+                    <img
+                        class="gallery-photo"
+                        src="foto/jidane.jpg"
+                    alt="Foto koleksi kedua"
+                    >
+
+                    <img
+                        class="gallery-photo"
+                        src="foto/jamet.jpg"
+                    alt="Foto koleksi ketiga"
+                    >
+
+                    <img
+                        class="gallery-photo"
+                        src="foto/pantai.jpg"
+                    alt="Foto koleksi keempat"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- LAMPIRAN -->
+            <div class="media-box">
+
+                <h3>Attachments</h3>
+
+                <ul>
+                    <li>
+                        <a href="cv.pdf" download>CV.pdf</a>
+                    </li>
+
+                    <li>
+                        <a href="portofolio.pdf" download>
+                            Portofolio.pdf
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="sertifikat.pdf" download>
+                            Sertifikat.pdf
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="dokumen-lain.pdf" download>
+                            Dokumen Lain.pdf
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html
+
+<body>
+  
+</body>
+
+</html>

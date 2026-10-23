@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 10px; 
+            font-family: Arial, sans-serif; 
+            background: #fff; 
+        }
+        h3 { margin-top: 0; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        a { text-decoration: none; color: blue; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <h3>Menu Navigasi</h3>
+    <ul>
+        <!-- 1. Beranda internal (Satu folder dengan sidebar.html) -->
+        <li>
+            <a href="main.html" target="main">Beranda</a>
+        </li>
+
+        <!-- 2. Layout (Mundur 1 tingkat ke folder utama, masuk ke folder layout) -->
+        <li>
+            <a href="../layout/layout.html" target="main">Layout</a>
+        </li>
+
+        <!-- 3. Profil (Mundur 1 tingkat ke folder utama, masuk ke folder profil) -->
+        <li>
+            <a href="../profil/profil.html" target="main">Profil</a>
+        </li>
+
+        <!-- 4. Praktikum Mandiri 1 (Internal sub-folder dari praktikum 3 jidane) -->
+        <li>
+            <a href="praktikum mandiri 1/klmpk 8 uiux.html" target="main">Praktikum Mandiri 1</a>
+        </li>
+
+        <!-- 5. Praktikum 2 (Mundur 1 tingkat ke folder utama, panggil praktikum2.html) -->
+        <li>
+            <a href="../praktikum2.html" target="main">Praktikum 2</a>
+        </li>
+    </ul>
+
+</body>
+</html>
